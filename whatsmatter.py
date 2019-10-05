@@ -1,7 +1,9 @@
 ####################################
-# Author: Charlie Eliphélé AGOSSOU
+# Author: Eliphélé Charlie AGOSSOU
+# Mail: charliepy007@gmail.com
 ####################################
 
+import sys
 import time
 import notify2
 import requests
@@ -10,6 +12,8 @@ import emojis
 
 def job():    
     global a,n    
+    # with open('users.json','r') as file:
+    #     data = file.read()
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
     a = json.loads(data.content)    
     n.set_urgency(notify2.URGENCY_NORMAL)
@@ -18,13 +22,19 @@ def job():
 
 if __name__ == '__main__':    
     first_content,a = "",""
-    notify2.init('Hackerlab2019 Qualifications news')
-    n = notify2.Notification(None, icon='')
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
-    first_content = json.loads(data.content)
+    if data.status_code != 200: 
+        print("Can't reach hackerlab results")
+        sys.exit()
+    else:
+        first_content = json.loads(data.content)
+        notify2.init('Hackerlab2019 Qualifications news')
+        n = notify2.Notification(None,icon='')   
+
     while True:
         job()        
         if first_content != a:
             n.show()
             first_content = a        
             time.sleep(1)
+

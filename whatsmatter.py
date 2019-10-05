@@ -19,7 +19,7 @@ def job():
 if __name__ == '__main__':    
     first_content,a = "",""
     notify2.init('Hackerlab2019 Qualifications news')
-    n = notify2.Notification(None,icon='./hackerlab.ico')
+    n = notify2.Notification(None)
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
     first_content = json.loads(data.content)
     while True:

@@ -1,3 +1,7 @@
+####################################
+# Author: Charlie Eliphélé AGOSSOU
+####################################
+
 import time
 import notify2
 import requests
@@ -6,8 +10,6 @@ import emojis
 
 def job():    
     global a,n    
-    # with open('users.json','r') as file:
-    #     data = file.read()
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
     a = json.loads(data.content)    
     n.set_urgency(notify2.URGENCY_NORMAL)
@@ -20,7 +22,6 @@ if __name__ == '__main__':
     n = notify2.Notification(None,icon='./hackerlab.ico')
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
     first_content = json.loads(data.content)
-
     while True:
         job()        
         if first_content != a:

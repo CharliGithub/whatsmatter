@@ -1,7 +1,7 @@
 # Whatsmatter HDN (HackerLab Desktop Notification)
 
 Python program used to inform in real time by desktop notification of Qualifiers for the final phase of ```#HackerLab2019```.
----
+
 ## Available for linux OS
 ---
 ## Dependencies

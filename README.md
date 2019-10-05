@@ -9,6 +9,6 @@ $ pip3 install emojis
 ```
 ## Run
 ```console
-$ git clone https://github.com/CharliGithub/whatsmatter
+$ git clone https://github.com/CharliGithub/whatsmatter.git
 $ python3 whatsmatter.py &
 ```

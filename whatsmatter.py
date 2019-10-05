@@ -12,8 +12,6 @@ import emojis
 
 def job():    
     global a,n    
-    # with open('users.json','r') as file:
-    #     data = file.read()
     data = requests.get('http://guidos.000webhostapp.com/dqfqfezqfezgrt.php')
     a = json.loads(data.content)    
     n.set_urgency(notify2.URGENCY_NORMAL)
@@ -37,4 +35,5 @@ if __name__ == '__main__':
             n.show()
             first_content = a        
             time.sleep(1)
+
 

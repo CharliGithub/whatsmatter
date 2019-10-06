@@ -9,14 +9,19 @@ import notify2
 import requests
 import json
 import emojis
+from requests.exceptions import ConnectionError
 
 def job():    
     global a,n,url    
-    data = requests.get(url)
+    try:
+        data = requests.get(url)
+    except ConnectionError as e:
+        print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
+        sys.exit() 
     try:
         a = json.loads(data.content)    
     except ValueError as e:    
-        print("Can't reach hackerlab results")
+        print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit()
     n.set_urgency(notify2.URGENCY_NORMAL)
     n.set_timeout(10000)
@@ -33,19 +38,19 @@ if __name__ == '__main__':
     """
     print(banner)
     print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !")
-    first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'
-    data = requests.get(url)
-    if data.status_code != 200: 
+    first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'    
+    try:
+        data = requests.get(url)
+    except ConnectionError as e:
         print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
-        sys.exit()
-    else:
-        try:
-            first_content = json.loads(data.content)
-        except ValueError as e:
-            print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
-            sys.exit()        
-        notify2.init('Hackerlab2019 Qualifications news')
-        n = notify2.Notification(None,icon='')   
+        sys.exit()        
+    try:
+        first_content = json.loads(data.content)
+    except ValueError as e:
+        print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
+        sys.exit()        
+    notify2.init('Hackerlab2019 Qualifications news')
+    n = notify2.Notification(None)   
 
     while True:
         job()        
@@ -53,4 +58,3 @@ if __name__ == '__main__':
             n.show()
             first_content = a        
             time.sleep(1)
-

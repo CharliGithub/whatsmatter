@@ -33,7 +33,7 @@ if __name__ == '__main__':
     """
     print(banner)
     print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !")
-    first_content,a,url = "","",'http://guidos.000webhostapp.com/dqfqfezqfezgrt.php'
+    first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'
     data = requests.get(url)
     if data.status_code != 200: 
         print("Can't reach hackerlab results")

@@ -36,13 +36,13 @@ if __name__ == '__main__':
     first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'
     data = requests.get(url)
     if data.status_code != 200: 
-        print("Can't reach hackerlab results")
+        print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit()
     else:
         try:
             first_content = json.loads(data.content)
         except ValueError as e:
-            print("Can't reach hackerlab results")
+            print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
             sys.exit()        
         notify2.init('Hackerlab2019 Qualifications news')
         n = notify2.Notification(None,icon='')   

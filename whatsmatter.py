@@ -22,7 +22,17 @@ def job():
     n.set_timeout(10000)
     n.update(emojis.encode(':bell: #Hackerlab2019: Les Finalistes'), emojis.encode('Numéro '+str(a['users'][-1]['id'])+': '+str(a['users'][-1]['username']).capitalize()+' est qualifié pour le #Hackerlab2019 :smile:'))        
 
-if __name__ == '__main__':    
+if __name__ == '__main__':
+    banner = """
+    __        ___           _       __  __       _   _            
+    \ \      / / |__   __ _| |_ ___|  \/  | __ _| |_| |_ ___ _ __ 
+     \ \ /\ / /| '_ \ / _` | __/ __| |\/| |/ _` | __| __/ _ \ '__|
+      \ V  V / | | | | (_| | |_\__ \ |  | | (_| | |_| ||  __/ |   
+       \_/\_/  |_| |_|\__,_|\__|___/_|  |_|\__,_|\__|\__\___|_|   
+                                                                  
+    """
+    print(banner)
+    print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !")
     first_content,a,url = "","",'http://guidos.000webhostapp.com/dqfqfezqfezgrt.php'
     data = requests.get(url)
     if data.status_code != 200: 

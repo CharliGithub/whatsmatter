@@ -18,5 +18,13 @@ $ pip3 install emojis
 ```console
 $ git clone https://github.com/CharliGithub/whatsmatter.git
 $ cd whatsmatter/
-$ python3 whatsmatter.py &
+$ python3 whatsmatter.py 
+    __        ___           _       __  __       _   _            
+    \ \      / / |__   __ _| |_ ___|  \/  | __ _| |_| |_ ___ _ __ 
+     \ \ /\ / /| '_ \ / _` | __/ __| |\/| |/ _` | __| __/ _ \ '__|
+      \ V  V / | | | | (_| | |_\__ \ |  | | (_| | |_| ||  __/ |   
+       \_/\_/  |_| |_|\__,_|\__|___/_|  |_|\__,_|\__|\__\___|_|   
+                                                                  
+    
+[+] Program has started ....  Don't close the terminal !
 ```

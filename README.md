@@ -2,7 +2,7 @@
 
 Python program used to inform in real time by desktop notification of Qualifiers for the final phase of ```#HackerLab2019```.
 
-<div style="text-align:center"><img src="Whatsmatter-about.png" /></div>
+<center><img src="Whatsmatter-about.png" /></center>
 
 ## Available for linux OS  
 > The program is launched as a daemon in the background of the system. Once a person is able to register for the final phase of the hackerlab, you will automatically receive a notification. It is important that the program is first launched

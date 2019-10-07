@@ -14,7 +14,7 @@ from requests.exceptions import ConnectionError
 def job():    
     global a,n,url    
     try:
-        data = requests.get(url)
+        data = requests.get(url,timeout=5)
     except ConnectionError as e:
         print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit() 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !")
     first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'    
     try:
-        data = requests.get(url)
+        data = requests.get(url,timeout=5)
     except ConnectionError as e:
         print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit()        
@@ -57,4 +57,4 @@ if __name__ == '__main__':
         if first_content != a:
             n.show()
             first_content = a        
-            time.sleep(1)
+            time.sleep(60)

@@ -9,13 +9,13 @@ import notify2
 import requests
 import json
 import emojis
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError, Timeout
 
 def job():    
     global a,n,url    
     try:
         data = requests.get(url,timeout=5)
-    except ConnectionError as e:
+    except (ConnectionError, Timeout) as e:
         print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit() 
     try:
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'    
     try:
         data = requests.get(url,timeout=5)
-    except ConnectionError as e:
+    except (ConnectionError, Timeout) as e:
         print("Can't reach hackerlab results. Please visit http://qualif.hackerlab.bj/resultats.html")
         sys.exit()        
     try:

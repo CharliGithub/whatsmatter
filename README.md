@@ -6,7 +6,7 @@ Python program used to inform in real time by desktop notification of Qualifiers
 
 ## Available for linux OS  
 > The program is launched in the system terminal. Once a person is able to register for the final phase of the hackerlab, you will automatically receive a notification. It is important that the program is first launched  
-*```ǸB```*: Having an internet connection is important
+*```NB```*: Having an internet connection is important
 ---
 ## Dependencies
 ```console

@@ -57,4 +57,4 @@ if __name__ == '__main__':
         if first_content != a:
             n.show()
             first_content = a
-            time.sleep(60)
+        time.sleep(30)

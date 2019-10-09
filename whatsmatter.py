@@ -37,7 +37,7 @@ if __name__ == '__main__':
                                                                   
     """
     print(banner)
-    print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !")
+    print("\033[32m[+] \033[0mProgram has started ....  \033[93mDon't close the terminal !\033[0m")
     first_content,a,url = "","",'http://qualif.hackerlab.bj/dqfqfezqfezgrt.php'    
     try:
         data = requests.get(url,timeout=30)
@@ -56,5 +56,5 @@ if __name__ == '__main__':
         job()        
         if first_content != a:
             n.show()
-            first_content = a        
-            time.sleep(60)
+            first_content = a
+        time.sleep(20)

@@ -1,6 +1,6 @@
 ####################################
 # Author: Eliphélé Charlie AGOSSOU
-# Mail: charliepy007@gmail.com
+# Mail: chaliagossou@gmail.com
 ####################################
 
 import sys

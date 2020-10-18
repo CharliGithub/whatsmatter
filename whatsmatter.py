@@ -1,14 +1,9 @@
 ####################################
-# Author: Eliphélé Charlie AGOSSOU
+# Author: Eliphélé Charli AGOSSOU
 # Mail: chaliagossou@gmail.com
 ####################################
 
-import sys
-import time
-import notify2
-import requests
-import json
-import emojis
+import sys, time, notify2, requests, json, emojis
 from requests.exceptions import ConnectionError, Timeout
 
 def job():    
